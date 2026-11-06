@@ -9,10 +9,22 @@
 static const char *TAG = "encoder_buzzer";
 
 // Short original fanfare, played when the frequency reaches MIN_HZ
+// "Sakura Sakura", traditional Japanese folk song
 static const Note MELODY[] = {
-    {523, 120}, {659, 120}, {784, 120}, {1047, 240},
-    {0, 80},
-    {784, 120}, {1047, 400},
+    // Sa-ku-ra, sa-ku-ra
+    {440, 400}, {440, 400}, {494, 800},
+    {440, 400}, {440, 400}, {494, 800},
+    // ya-yo-i no so-ra wa
+    {440, 400}, {494, 400}, {523, 400}, {494, 400},
+    {440, 400}, {494, 200}, {440, 200}, {349, 800},
+    // mi-wa-ta-su ka-gi-ri
+    {330, 400}, {262, 400}, {330, 400}, {349, 400},
+    {330, 400}, {330, 200}, {262, 200}, {247, 800},
+    // final: sa-ku-ra, sa-ku-ra, ...
+    {440, 400}, {440, 400}, {494, 800},
+    {440, 400}, {440, 400}, {494, 800},
+    {330, 400}, {349, 400}, {494, 200}, {440, 200},
+    {349, 400}, {330, 1200},
 };
 #define MELODY_LENGTH (sizeof(MELODY) / sizeof(MELODY[0]))
 
